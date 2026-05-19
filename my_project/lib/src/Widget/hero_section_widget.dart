@@ -7,41 +7,42 @@ class HeroSectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/banner_cta.png'),
-          fit: .cover,
+          fit: BoxFit.cover,
         ),
       ),
       child: Column(
-        spacing: 20,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
             padding: const EdgeInsets.all(20),
-            child: Image.asset('assets/hero_logo.png'),
+            child: Image.asset('assets/hero_cta.png', width: 300),
           ),
           Text.rich(
-            textAlign: .center,
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: GoogleFonts.orbitron().fontFamily,
               fontSize: 50,
-              fontWeight: .bold,
+              fontWeight: FontWeight.bold,
             ),
-            const TextSpan(
-              text: 'Hora de abraçar seu',
+            TextSpan(
+              text: 'Hora de abraçar seu ',
               style: TextStyle(color: Color(0xFFFF55DF)),
               children: [
                 TextSpan(
-                  text: ' lado geek',
+                  text: 'lado geek',
                   style: TextStyle(color: Color(0xFF8FFF24)),
                 ),
               ],
             ),
           ),
+          SizedBox(height: 25),
           ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF7800F7),
+              backgroundColor: Color(0xFF780BF7),
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
             ),
             child: Text(
@@ -50,7 +51,7 @@ class HeroSectionWidget extends StatelessWidget {
                 fontFamily: GoogleFonts.poppins().fontFamily,
                 fontSize: 25,
                 color: Colors.white,
-                fontWeight: .bold,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),

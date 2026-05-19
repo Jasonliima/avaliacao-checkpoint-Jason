@@ -1,69 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ProductCardWidget extends StatelessWidget {
-  final String imageAsset;
-  final String name;
-  final String price;
-
   const ProductCardWidget({
+    required this.nome,
+    required this.url,
+    required this.preco,
     super.key,
-    required this.imageAsset,
-    required this.name,
-    required this.price,
   });
+
+  final String nome;
+  final String url;
+  final String preco;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+    return Card(
+      margin: const EdgeInsets.all(20),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
+      elevation: 5,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // Imagem do produto (largura total, proporcional)
-          ClipRRect(
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(8)),
-            child: Image.asset(
-              imageAsset,
-              width: double.infinity,
-              height: 200,
-              fit: BoxFit.cover,
-              errorBuilder: (_, __, ___) => Container(
-                width: double.infinity,
-                height: 200,
-                color: const Color(0xFFEEEEEE),
-                child: const Center(
-                  child: Icon(
-                    Icons.image_not_supported_outlined,
-                    color: Colors.grey,
-                    size: 40,
-                  ),
-                ),
-              ),
-            ),
+          Image.network(
+            url,
+            height: 200,
+            width: double.infinity,
+            fit: BoxFit.cover,
           ),
-
-          // Nome e preço abaixo da imagem
           Padding(
-            padding: const EdgeInsets.only(top: 8, bottom: 4),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: Text(
-              name,
-              style: const TextStyle(
-                color: Colors.black87,
-                fontSize: 15,
-                fontWeight: FontWeight.w600,
+              nome,
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                fontFamily: GoogleFonts.orbitron().fontFamily,
               ),
             ),
           ),
-          Text(
-            price,
-            style: const TextStyle(
-              color: Colors.black87,
-              fontSize: 14,
-              fontWeight: FontWeight.w500,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            child: Text(
+              preco,
+              style: TextStyle(
+                fontSize: 31,
+                fontFamily: GoogleFonts.poppins().fontFamily,
+              ),
             ),
           ),
-          const SizedBox(height: 12),
-          const Divider(height: 1, color: Color(0xFFEEEEEE)),
         ],
       ),
     );
