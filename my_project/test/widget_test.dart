@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -19,5 +20,15 @@ void main() {
     // Verify that our counter has incremented.
     expect(find.text('0'), findsNoWidget);
     expect(find.text('1'), findsOneWidget);
+=======
+// This is a basic unit test that verifies the app entrypoint compiles.
+
+import 'package:flutter_test/flutter_test.dart';
+import 'package:usedev_uninassau/main.dart';
+
+void main() {
+  test('MyApp class exists', () {
+    expect(const MyApp(), isA<MyApp>());
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
   });
 }

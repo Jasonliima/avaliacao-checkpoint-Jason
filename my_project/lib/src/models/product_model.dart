@@ -32,12 +32,19 @@ class ProductModel {
   final String name;
   final ProductCategory category;
   final String imageUrl;
+<<<<<<< HEAD
   final double price; // Agora é double para precisão de cálculo
   final String description;
   final List<RatingModel> ratings;
 
   String get formattedPrice => 'R\$ ${price.toStringAsFixed(2).replaceAll('.', ',')}';
 
+=======
+  final String price;
+  final String description;
+  final List<RatingModel> ratings;
+
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
   double get averageRating {
     if (ratings.isEmpty) return 0.0;
     final total = ratings.fold<double>(
@@ -51,16 +58,29 @@ class ProductModel {
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
+<<<<<<< HEAD
       id: json['id']?.toString() ?? '',
       name: json['name'] as String? ?? json['title'] as String? ?? '',
+=======
+      id: json['id'] as String? ?? '',
+      name: json['name'] as String? ?? '',
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
       category: ProductCategory.values.firstWhere(
         (value) => value.name == json['category'] as String?,
         orElse: () => ProductCategory.promocao,
       ),
+<<<<<<< HEAD
       imageUrl: json['imageUrl'] as String? ?? json['image'] as String? ?? '',
       price: (json['price'] as num?)?.toDouble() ?? 0.0,
       description: json['description'] as String? ?? '',
       ratings: (json['ratings'] as List<dynamic>?)
+=======
+      imageUrl: json['imageUrl'] as String? ?? '',
+      price: json['price'] as String? ?? '',
+      description: json['description'] as String? ?? '',
+      ratings:
+          (json['ratings'] as List<dynamic>?)
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
               ?.map(
                 (item) => RatingModel.fromJson(item as Map<String, dynamic>),
               )

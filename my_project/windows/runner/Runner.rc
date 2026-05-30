@@ -90,12 +90,21 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
+<<<<<<< HEAD
             VALUE "FileDescription", "usedev_uninassau_keven" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "usedev_uninassau_keven" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2026 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "usedev_uninassau_keven.exe" "\0"
             VALUE "ProductName", "usedev_uninassau_keven" "\0"
+=======
+            VALUE "FileDescription", "usedev_uninassau" "\0"
+            VALUE "FileVersion", VERSION_AS_STRING "\0"
+            VALUE "InternalName", "usedev_uninassau" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 com.example. All rights reserved." "\0"
+            VALUE "OriginalFilename", "usedev_uninassau.exe" "\0"
+            VALUE "ProductName", "usedev_uninassau" "\0"
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

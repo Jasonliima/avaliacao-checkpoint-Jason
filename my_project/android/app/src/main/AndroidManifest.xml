@@ -1,7 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:label="UseDev Keven"
+=======
+    <application
+        android:label="my_project"
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -13,6 +18,13 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
+<<<<<<< HEAD
+=======
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
             <meta-data
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
@@ -22,10 +34,23 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+=======
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+<<<<<<< HEAD
+=======
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
     <queries>
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+<<<<<<< HEAD
 import '../models/product_model.dart';
 import '../widgets/custom_app_bar_widget.dart';
 import '../services/cart_service.dart';
+=======
+import 'package:usedev_uninassau/src/models/product_model.dart';
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
 
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({
@@ -15,7 +19,21 @@ class ProductDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       appBar: const CustomAppBarWidget(title: 'Detalhe do produto'),
+=======
+      appBar: AppBar(
+        leading: const Icon(Icons.menu, size: 40),
+        title: const Text('Detalhe do produto'),
+        centerTitle: true,
+        actions: const [
+          Icon(Icons.person_outline, size: 40),
+          SizedBox(width: 10),
+          Icon(Icons.shopping_cart_outlined, size: 40),
+          SizedBox(width: 25),
+        ],
+      ),
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -25,10 +43,13 @@ class ProductDetailScreen extends StatelessWidget {
               height: 280,
               width: double.infinity,
               fit: BoxFit.cover,
+<<<<<<< HEAD
               errorBuilder: (context, error, stackTrace) => const SizedBox(
                 height: 280,
                 child: Icon(Icons.broken_image, size: 50),
               ),
+=======
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
             ),
             Padding(
               padding: const EdgeInsets.all(20),
@@ -45,7 +66,11 @@ class ProductDetailScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   Text(
+<<<<<<< HEAD
                     product.formattedPrice,
+=======
+                    product.price,
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
                     style: TextStyle(
                       fontSize: 28,
                       fontFamily: GoogleFonts.poppins().fontFamily,
@@ -66,6 +91,7 @@ class ProductDetailScreen extends StatelessWidget {
                     width: double.infinity,
                     height: 55,
                     child: ElevatedButton(
+<<<<<<< HEAD
                       onPressed: () {
                         // Tópico 12: Lógica de Carrinho
                         CartService().addToCart(product);
@@ -79,6 +105,9 @@ class ProductDetailScreen extends StatelessWidget {
                           ),
                         );
                       },
+=======
+                      onPressed: () {},
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.deepPurple,
                         shape: RoundedRectangleBorder(
@@ -90,7 +119,10 @@ class ProductDetailScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 18,
                           fontFamily: GoogleFonts.poppins().fontFamily,
+<<<<<<< HEAD
                           color: Colors.white,
+=======
+>>>>>>> 7aa0efc8ec4ab86d3bb63d1d51bb5530b3842920
                         ),
                       ),
                     ),
